@@ -16,11 +16,28 @@ document.write(lastName+ "</br>");
 
 document.write(firstName + "</br>");
 
-//Check ASCII code a character or Integer
 
+
+//Check ASCII code a character or Integer
+/*
+ 
 let string = prompt("Enter The character" );//enter a character
 
 let result = string.charCodeAt(0); //check the value character
 
 document.write(result); // print ASCII value
+*/
+
+// Addtion to Number //////////////////////////////////////
+
+let firstNum = parseInt(prompt("Enter the 1st number"));
+
+let secondNum =  parseInt(prompt("Enter the 2nd number"));
+
+resultNum = firstNum + secondNum ;
+
+document.write(resultNum);
+
+
+
 
