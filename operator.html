@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    
+    <center>
+        <div>
+            <h1 id="Arithmetic"></h1><br> <span>Arithmetic</span>
+            <h1 id="Logical"></h1></br> <span>Logical</span>
+            <h1 id="Ternary"></h1></br> <span>Ternary</span>
+            <h1 id="Assginment"></h1></br> <span>Assginment</span>
+            <h1 id="Comparison"></h1> <span>Comparison</span>
+        </div>
+    </center>
+    <script>
+        // Arithmetic Operastor 
+
+        var a=2 , b=8 ;
+        //  let c = a+b;  
+        document.getElementById("Arithmetic").innerHTML = a+b; //additon
+
+        document.getElementById("Arithmetic").innerHTML = a-b; // subtarection
+
+        document.getElementById("Arithmetic").innerHTML = a/b; // devesion
+
+        document.getElementById("Arithmetic").innerHTML = a*b; // Multiplycation
+
+        document.getElementById("Arithmetic").innerHTML = b%a; // modular
+
+        document.getElementById("Arithmetic").innerHTML = ++b; // increment
+
+        document.getElementById("Arithmetic").innerHTML = --a; // decrement
+
+        // Logical Operastor
+
+        document.getElementById("Logical").innerHTML = true && true // And Operator
+
+        document.getElementById("Logical").innerHTML = true || false // or Operator
+
+        document.getElementById("Logical").innerHTML = true ^ true // Not Operator
+
+        // Ternary Operastor 
+    
+        //b > a  ? "GreaterThen a>b " : " LessThen b>a"  // syntex ,same ifElse 
+        document.getElementById("Ternary").innerHTML =  b > a  ? "GreaterThen a>b " : " LessThen b>a"; // Equil
+
+        // Assginment Operastor 
+
+       var counter  = 5 ; 
+       counter =+ counter;
+
+       document.getElementById("Assginment").innerHTML = counter += counter;// 5+5 = 10
+       document.getElementById("Assginment").innerHTML = counter -= counter; // 10-10 = 0
+       document.getElementById("Assginment").innerHTML = counter *= counter; //  0*0 = 0
+       document.getElementById("Assginment").innerHTML = counter /= counter; // 0/0 = NaN
+       document.getElementById("Assginment").innerHTML = counter %= counter; // NaN%NaN = NaN
+
+
+        // Comparison Operastor 
+
+        var number1  = 5  // Assgin the value ot variable
+        var number2  = 5  // Assgin the value ot variable
+
+        document.getElementById("Comparison").innerHTML = number1 < number2 ; // lessThen
+        document.getElementById("Comparison").innerHTML = number1 > number2 ; // graterThen
+        document.getElementById("Comparison").innerHTML = number1 <= number2; // lessThenEquil
+        document.getElementById("Comparison").innerHTML = number1 >= number2; // graterThenEquil
+        document.getElementById("Comparison").innerHTML = number1 != number2; // isNot Equil
+        document.getElementById("Comparison").innerHTML = number1 == number2; // Equil
+
+
+        
+    </script>
+</body>
+</html>
