@@ -18,7 +18,7 @@
     <br>
     <br>
     <button onclick="call()">Calculate</button>
-    <input type="number" readonly id="result">
+    <input type="number" readonly id="result" >
     <script>
         function call(){
             var num1 = document.getElementById("first").value;
@@ -41,6 +41,27 @@
                 document.getElementById("result").value = res;
             }
         }
+
+        //program for swapping value of tow variable
+        var a = 20 ;
+        var b = 10 ;
+        var temp = a ;
+        a=b;
+        b= temp;
+        document.write(a +"<br>");
+        //program for swapping value of tow variable mathemathical
+
+        let p =20;
+        let q =10;
+
+        p = p+q;
+        q = p-q ;
+        p = p- q
+        document.write( "p = "+p + "__ q = "+q);
+
+
+
+
     </script>
 </body>
 </html>
