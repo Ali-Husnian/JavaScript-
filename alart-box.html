@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alart-Box | Types</title>
+</head>
+<body>
+    <h3>Wellcom : <span id="name"></span></h3>
+</body>
+</html>
+    <script>
+        // alert box
+            alert("Wellcom");
+        // comfim box
+           var res = confirm("Do you want to vist this site!");
+           console.warn(res);
+            if(res == true){
+                 // promit box
+                var name  = prompt("Enter your name");
+                document.getElementById("name").innerHTML = name;
+            }else{
+                window.location = "....";
+            }
+       
+    </script>
