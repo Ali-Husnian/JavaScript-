@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditinol-Statments</title>
+</head>
+<body>
+    <h3 id="res"></h3>
+</body>
+</html>
+
+<script>
+    let weight = prompt("Enter Weight in (KG)");
+    let hight = prompt("Enter Weight in (Fits)");
+    let bmi = weight/ (hight*hight);
+    
+    if (bmi <= 1.98) {
+        document.getElementById("res").innerHTML = "Good bmi weight";
+    } else if(bmi > 2.98) {
+        document.getElementById("res").innerHTML = "Under weight";
+    } else {
+        document.getElementById("res").innerHTML = "High bmi weight";
+    }
+
+    document.write("Your BMI Weight is " + bmi);
+
+
+</script>
