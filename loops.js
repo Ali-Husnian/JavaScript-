@@ -46,8 +46,17 @@ document.write("<h1> continue statment <h1/>");
 for (let i = 0; i <= 10; i++) {
 
     if( i == 5){
-        continue;  // skip 5 
+        continue;  // skip the digit 5 
     }
     document.write(i + "<br/>");
+}
+document.write("<hr/>");
+// break statment
+for (let j = 0; j <= 20; j++) {
+    
+    if(j == 14){ // loop stop after 14
+        break ;
+    }
+    document.write(j + "<br/>");
     
 }
