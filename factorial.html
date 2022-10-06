@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Factorial</title>
+</head>
+<body>
+	<h1>Find Factorial any number</h1>
+	<h3 id="res"></h3>
+</body>
+
+<script>
+	var fac = 1;
+	var num = prompt("Enter any number check Factorial");
+	for(var i=1; i<=num ; i++){
+		fac = i*fac;
+	}
+	document.getElementById("res").innerText = "The Factorial "+ num +" is "+ fac;
+</script>
+</html>
