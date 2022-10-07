@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<style>
+    .action{
+        margin: auto;
+        height:400px; 
+        width: 500px;
+        background : gray; 
+        margin: 150px 0px 0px 400px;
+        padding: 10px;
+    }
+    .action p{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="action" id="action">
+        <h1 id="change">Heading</h1>
+        <p onmouseleave="myFunction1()">Lorem ipsum dolor sit amet consectetur
+           adipisicing elit. Deserunt, voluptatibus eligendi.
+            Aspernatur quae praesentium alias expedit.
+
+            Lorem ipsum dolor sit amet consectetur
+           adipisicing elit. Deserunt, voluptatibus eligendi.
+            Aspernatur quae praesentium alias expedit.
+        </p>
+        <input type="email" name="email" id="email" onkeydown="myFunction2()">
+    </div>
+</body>
+<script>
+    
+     function myFunction1(){
+        alert("onMouse");
+    }
+    function myFunction2(){
+        alert("onKeypress");
+    }
+    
+    
+</script>
+</html>
