@@ -19,7 +19,7 @@
         cursor: pointer;
     }
 </style>
-<body>
+<body onload="onLoad()">
     <div class="action" id="action">
         <h1 id="change">Heading</h1>
         <p onmouseleave="myFunction1()">Lorem ipsum dolor sit amet consectetur
@@ -32,9 +32,57 @@
         </p>
         <input type="email" name="email" id="email" onkeydown="myFunction2()">
     </div>
+    <fieldset>
+        <!--
+            1.onblur()
+            2.onchange()
+            3.onfocus()
+            4.oninout()
+            5.noinvalid()
+            6.onreset()
+            7.onsearch()
+            8.onselect()
+            9.onsubmit()
+            10.noload()
+        -->
+        <legend>Form Events</legend>
+      
+            <label for="">Name:</label>
+            <input type="text" class="frm" name="fname" id="name" placeholder="Enter Full Name" onfocus="formEvents()"><br><br>
+            <label for="">Email:</label>
+            <input type="email" class="frm" name="uemail" id="email" placeholder="Enter valid Email"><br><br>
+            <input type="button" id="frmSub" onclick="submit1()" value="submit">
+       
+    </fieldset>
 </body>
 <script>
-    
+    function formEvents(){
+        document.getElementsByClassName("frm")[0].style.background=" aqua";
+    }
+    function onLoad(){
+        window.alert('Page successfully loaded');
+    }
+    function submit1(){
+        document.getElementById("frmSub").style.backgroundColor = "red";
+    }
+    /*
+    ////On mouse Events
+    1.onclick()
+    2.oncontextmenu()
+    3.onmousedown()
+    4.onmouseenter()
+    5.onmouseleave()
+    6.onmousemove()
+    7.onmouseout()
+    8.onmouseover()
+    9.onmouseup()
+    10.ondblclick()
+
+    //// On Key Events
+    1.onkeyup()
+    2.onkeydown()
+    3.onkeypress()
+    */
      function myFunction1(){
         alert("onMouse");
     }
