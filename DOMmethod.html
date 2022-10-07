@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Method</title>
+</head>
+<body>
+    <input type="text" name="userName" id="userName">
+    <button onclick="myFun()">Submit</button>
+    <h1></h1>
+</body>
+<script>
+    
+    // document.write()
+    // document.getElementById()
+    // document.getElementsByClassName()
+    
+    function myFun(){
+        var UserName = document.getElementsByName("userName")[0].value;
+        // console.warn(UserName);
+        document.getElementsByName("userName")[0].value = "";
+        document.getElementsByTagName("h1")[0].innerHTML = UserName;
+    }
+</script>
+</html>
