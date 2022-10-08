@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout | clearTimeout</title>
+</head>
+<body onload="start()">
+    <!-- setTimeout | clearTimeout -->
+    <h1 style="color: red;">setTimeout | clearTimeout</h1>
+    <h1 id="res"></h1>
+    <button onclick="stop()">Stop</button>
+    <button onclick="start()">Start</button>
+    <!-- clearInterval setInterval -->
+    <h1 style="color: red;"> clearInterval setInterval</h1>
+    <h1 id="section"></h1>
+    <button onclick="Stopcountting()">StopCountting</button>
+</body>
+
+<script>
+    ///////////////////////////////// * setTimeout | clearTimeout *///////////////////////////////////////////////
+    var my ;
+    function start() {
+       var d = new Date();
+        var s = d.getSeconds();
+        document.getElementById("res").innerText = s;
+         my = setTimeout(start,1000);
+    }
+    function stop() {
+        clearTimeout(my);
+    }
+    document.write("<br/> <hr/> </br>");
+
+    ///////////////////////////////// * clearInterval setInterval * ///////////////////////////////////////////////
+    var num = 0 ;
+
+   var myVar = setInterval(countting,1000); 
+    function countting(){
+        document.getElementById("section").innerText = num;
+        num++;
+    }
+
+    function Stopcountting() {
+        clearInterval(myVar);
+    }
+</script>
+</html>
