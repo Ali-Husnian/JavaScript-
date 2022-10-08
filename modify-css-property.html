@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- modify-css-property.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify-CSS-Property</title>
+</head>
+<style>
+    #name{
+        text-align: center;
+        font-size: 50px;
+        color: red;
+        transition: 1s;
+        margin-top: 50px;
+        cursor: pointer;
+        /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    }
+</style>
+<body>
+    <h1 id="name" onmouseenter="modify()" onmouseleave="numodify()">Ali Husnain</h1>
+</body>
+
+<script>
+    function modify() {
+        document.getElementById("name").style.color = "blue";
+        document.getElementById("name").style.fontSize = "100px";
+        // document.getElementById("name").innerText = "WellCom To TryBase";
+        document.getElementById("name").style.fontFamily = 
+        "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+    }
+    function numodify() {
+        document.getElementById("name").style.color = "red";
+        document.getElementById("name").style.fontSize = "50px";
+        // document.getElementById("name").innerText = "Ali Husnain";
+        document.getElementById("name").style.fontFamily = "noun";
+    }
+</script>
+</html>
