@@ -9,10 +9,24 @@
 <body>
     <input type="text" name="userName" id="userName">
     <button onclick="myFun()">Submit</button>
+    <hr>
+    <button onclick="OpenTabe()">Open Window</button>
+    <button onclick="CloseTabe()">Close Window</button>
+
     <h1></h1>
 </body>
 <script>
-    
+
+    // Open new Window open() and close() function
+    var fb ;
+function OpenTabe(){
+    fb = window.open("https://www.google.com" ,"width=500px","height=500px");
+}
+function CloseTabe(){
+    fb.close();
+}
+
+
     // document.write()
     // document.getElementById()
     // document.getElementsByClassName()
@@ -23,5 +37,7 @@
         document.getElementsByName("userName")[0].value = "";
         document.getElementsByTagName("h1")[0].innerHTML = UserName;
     }
+
+
 </script>
 </html>
