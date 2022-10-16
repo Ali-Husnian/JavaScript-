@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+</head>
+<body>
+    <h1>Math Objects</h1>
+    <h3> Pi's value : <span id="res"></span></h3>
+    <h2>Genreat OTP code : <span id="otp"></span></h2>
+</body>
+<script>
+    var pi = Math.PI; //return the pi's value (3.141592653589793)
+    //  console.warn(pi);
+    document.getElementById("res").innerText = pi;
+
+    var num = 5.06;
+    var round = Math.round(num); //return the rounded number nearest intiger;
+    console.log(round);
+    
+    var num1 = 2;
+    var num2 = 5;
+    var power = Math.pow(num1,num2); //return the vale of num1(x) to the power (y)num2;
+    console.log(power);
+    
+    var sqr = 625;
+    var sqrRoot = Math.sqrt(sqr); //return the Square Root of number;
+    console.log(sqrRoot);
+
+    var number = (-44+34);
+    var abs = Math.abs(number); //return the -ve to +ve number
+    console.log(abs);
+
+    var num3 = 5.06;
+    var ceil = Math.ceil(num3); //return the rounded number nearest to up intiger;
+    console.log(ceil);
+
+    var num4 = 5.06;
+    var floor  = Math.floor(num4); //return the rounded number nearest to down intiger;
+    console.log(floor);
+    
+    console.warn(Math.min(43,34,55)); // find the minimum value
+
+    console.warn(Math.max(43,34,55)); // find the maximum value
+
+    var rand = Math.random()*10000;
+
+    var otp = Math.floor(rand);
+
+    document.getElementById("otp").innerText = otp;
+
+
+</script>
+</html>
