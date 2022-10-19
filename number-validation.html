@@ -21,8 +21,6 @@
 <script>
     function validate(e) {
         document.getElementById("error").style.color="red";
-        // let res = e.value;
-        // console.log(res);
         if(isNaN(e.value)){
                 document.getElementById("error").innerText = "Plece enter numbers.";
         }else{
@@ -30,7 +28,6 @@
             if(e.value.length > 10){
                 document.getElementById("error").innerText = "plese enter 10 digits";
             }
-
         }
     }
 </script>

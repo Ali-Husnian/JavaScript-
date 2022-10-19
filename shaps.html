@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prin shaps</title>
+</head>
+<body>
+    <script>
+        //shap triangle
+    var rows = prompt("Enter Hight of Triangle");
+    var symbol = prompt("Enter symbol of Rriangle");
+    for(var i = 1 ;i<= rows ; i++){ //first loop print rows
+        for(var j = 1 ; j<=i ; j++)
+        {                           // secondloop print colums
+            document.write(symbol+" ");
+        }
+       document.write("</br>");
+    }
+    //revirse triangle
+    for(var i = rows ;i>= 1 ; i--){
+        for(var j = 1 ; j<=i ; j++)
+        {
+            document.write(symbol+" ");
+        }
+       document.write("</br>");
+    }
+    </script>
+</body>
+</html>
