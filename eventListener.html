@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListener</title>
+</head>
+<body>
+    <h1>AddEventListener | RemoveEventListener</h1>
+    <div id="res">000</div>
+	<button id="btn">click me</button>  
+	<button onclick="stop()">stop</button>
+</body>
+<script>
+    // Add EventListener / Remove EventListener
+		var x = 0;
+		document.getElementById('btn').addEventListener("click",counter);
+
+		function counter(){
+			document.getElementById("res").innerText=x;
+			x++;
+			document.getElementById("res").style.color="red";
+		}
+
+	document.getElementById("res").addEventListener("mouseenter",change);
+
+	function change(){
+		document.getElementById("btn").style.color="green";
+		}
+
+				//remove Event Listener
+		function stop(){
+
+			document.getElementById("btn").removeEventListener("click",counter);
+		}
+</script>
+</html>
