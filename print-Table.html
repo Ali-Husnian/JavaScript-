@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Table</title>
+</head>
+<body>
+    <h1>Print Table</h1>
+    
+</body>
+<script>
+    // print table
+    var number = prompt("Enter any number print a table");
+    
+    for(let i= 1; i <= 10; i++){
+        document.write( "<b>"+number+" * " +i+ " = "+number*i + "<br>") ;
+    }
+    //shap triangle
+    var rows = prompt("Enter Hight of Triangle");
+    var symbol = prompt("Enter symbol of Rriangle");
+    for(var i = 1 ;i<= rows ; i++){ //first loop print rows
+        for(var j = 1 ; j<=i ; j++)
+        {                           // secondloop print colums
+            document.write(symbol+" ");
+        }
+       document.write("</br>");
+    }
+    //revirse triangle
+    for(var i = rows ;i>= 1 ; i--){
+        for(var j = 1 ; j<=i ; j++)
+        {
+            document.write(symbol+" ");
+        }
+       document.write("</br>");
+    }
+</script>
+</html>
+
