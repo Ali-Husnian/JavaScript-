@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Validation</title>
+</head>
+<body>
+    <fieldset>
+        <br>
+        <legend>Number Validation</legend>
+        <label for="">Enter Number:</label>
+        <br>
+        <input type="text" id="input" onkeyup="validate(this)">
+        <br>
+        <p id="error"></p>
+        <br>
+    </fieldset>
+</body>
+<script>
+    function validate(e) {
+        document.getElementById("error").style.color="red";
+        // let res = e.value;
+        // console.log(res);
+        if(isNaN(e.value)){
+                document.getElementById("error").innerText = "Plece enter numbers.";
+        }else{
+            document.getElementById("error").innerText = "";
+            if(e.value.length > 10){
+                document.getElementById("error").innerText = "plese enter 10 digits";
+            }
+
+        }
+    }
+</script>
+</html>
