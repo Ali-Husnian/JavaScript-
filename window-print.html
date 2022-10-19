@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Print</title>
+</head>
+<style>
+
+        .container h1{
+            text-align: center;
+            margin: auto;
+        }
+        .container #text{
+            text-align: center;
+            margin: auto;
+        }
+        .container .img-logo{
+            text-align: center;
+            margin-left: 45%;
+        }
+        .container #full-click{
+           margin-left: 45%;
+        }
+        .container #half-print{
+           margin-left: 45%;
+        }
+        </style>
+<body id="body">
+    <div class="container">
+        <h1>Windows Print Function</h1><br>
+        <div class="img">
+            <img src="download.png" alt="image-logo" class="img-logo">
+        </div>
+        <p id="text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis eveniet unde officia fugiat, sit animi minus impedit recusandae. Dignissimos accusamus modi asperiores, explicabo deleniti recusandae dolor praesentium eligendi quidem corporis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, officiis suscipit? Ut corporis, odit debitis atque quasi tempora aliquam at voluptatum, beatae et nihil suscipit unde praesentium possimus explicabo, accusantium incidunt nam ad quisquam vero pariatur deserunt repellat veritatis. Nostrum ipsum magnam libero doloremque perferendis iste in nisi provident. Recusandae vitae deleniti reprehenderit, doloremque sequi nihil repellendus. Sunt deleniti aliquam doloribus voluptatibus voluptate nostrum quis dicta. Doloribus ratione aliquam non harum, accusantium pariatur nesciunt, placeat adipisci quibusdam, sapiente cum magnam sequi? Sit, quod. Suscipit, dolor laborum, ab molestias dolorem facilis qui sint corrupti exercitationem autem, iure veritatis sunt. Cupiditate qui ipsa nobis veniam cumque. Vero, inventore? Itaque beatae sint corporis iusto quo dignissimos error mollitia, ducimus obcaecati maiores alias fugit minima ullam, fuga laboriosam hic, consequatur debitis voluptate! Quaerat, rem necessitatibus voluptatibus sunt ducimus id. Esse, sint assumenda explicabo eaque perferendis consectetur, placeat voluptatum, ullam expedita molestiae quisquam amet quos odit repellendus pariatur recusandae.Illum nulla id deleniti corporis, tempore adipisci maiores veniam, fugiat architecto repudiandae quisquam error odit earum tenetur dolorem quasi cumque. Numquam repellat ab dolorum dignissimos omnis facere pariatur, ea reiciendis excepturi, similique voluptate. Unde harum nulla quia neque autem! Porro quod dolorem animi quas. Sequi, optio quae amet at sint aut repellat, vel sed eos ex, pariatur nemo sunt incidunt autem dignissimos voluptate exercitationem perspiciatis. Aspernatur ipsum, animi sit repellat labore porro blanditiis eius sint quibusdam temporibus odio totam neque repudiandae consequuntur illo eligendi doloremque dolores recusandae deserunt a.
+        </p>
+        <button id="half-print" onclick="ptintPage()">Paragraph print</button>
+        <p>
+            Necessitatibus quaerat doloremque molestias ab soluta voluptatibus accusantium, eligendi velit expedita recusandae ut eum saepe atque! Quis necessitatibus, eos animi alias voluptate optio iste consequuntur perspiciatis deleniti sapiente ut nesciunt et! Doloremque ratione fugiat sunt sit debitis in eveniet quo voluptates autem, corrupti unde necessitatibus nam, ea repellendus velit a, rerum quas molestiae dolorem tempore aut ut dignissimos labore. Voluptatum, illo corporis magnam consectetur cum, cupiditate voluptatibus deserunt aperiam voluptatem autem quis exercitationem totam temporibus ex doloribus assumenda, quisquam eaque eos? Consectetur ea necessitatibus excepturi nulla at, pariatur qui totam! Reprehenderit, expedita ipsam aperiam, saepe quae eos, minima fugit unde et neque deleniti rerum voluptas officia quibusdam laboriosam officiis iusto animi. Temporibus nam ex aliquam itaque id magni, maiores nulla. Similique numquam culpa, quae id ex porro doloribus voluptates exercitationem ab at natus hic corporis ipsa ut error possimus ad, accusantium optio. Quod numquam neque, provident eaque ab, dolores laboriosam deserunt placeat recusandae velit sed quasi amet aperiam! Fuga repellendus porro similique quos, ut error molestiae expedita sequi repudiandae eveniet adipisci sapiente impedit dolorum animi qui. Soluta quidem placeat ad quo cumque animi officia veritatis fuga quia minima maxime odio provident labore, totam corrupti atque, ducimus culpa magni, laborum officiis debitis illum delectus non libero! Voluptatibus ab accusamus quam quidem eligendi asperiores dolor accusantium iure quibusdam, porro et aut quae, ex ut facere aliquam sapiente recusandae minima enim culpa, ratione nostrum eveniet dolorum dignissimos. Totam quos adipisci ab incidunt! Quod odio soluta facere delectus voluptatum aut ad nam, autem iste. Eos mollitia esse temporibus necessitatibus harum saepe.
+
+        </p>
+        <button id="full-click" onclick="window.print()">Page Print</button>
+    </div>
+    <script>
+        var body ;
+        var text ;
+        var print ;
+
+       function ptintPage(){
+            body = document.getElementById("body").innerHTML;
+            text = document.getElementById("text").innerHTML;
+            document.getElementById("body").innerHTML = text;
+            window.print();
+           document.getElementById("body").innerHTML = body ; 
+       }
+    </script>
+</body>
+</html>
