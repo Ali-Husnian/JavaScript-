@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute | getAttribute</title>
+</head>
+<style>
+    .red{
+        color:red;
+    }
+    .bule{
+        color:blue;
+    }
+</style>
+<body>
+    <h1>setAttribute and getAttribute</h1>
+    <h2 class="red" id="text">
+        JavaScript Full Course
+    </h2>
+    <button onclick="test()">Click Me</button>
+    <p id="res"></p>
+</body>
+<script>
+    var data = document.getElementById("text");
+    function test() {
+       var clss = data.getAttribute("class");
+    //    document.getElementById("res").innerText = clss;
+
+    if (clss === "red") {
+        document.getElementById("text").setAttribute("class","bule");
+    }
+    else
+    {
+        document.getElementById("text").setAttribute("class","red");
+    }
+        
+    }
+    
+</script>
+</html>
