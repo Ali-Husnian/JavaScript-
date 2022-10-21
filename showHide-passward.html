@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide PassWord</title>
+</head>
+<style>
+    body{
+        background: skyblue;
+    }
+    .big{
+        height: 400px;
+        width: 400px;
+        margin-left: 35%;
+        margin-top: 150px;
+    
+    }
+</style>
+<body>
+    <div class="big">
+        <fieldset>
+            <legend>Show Hide PassWord</legend>
+            <form action="" method="get">
+                <p>User Name:</p>
+                <input type="text" name="name" id="name">
+                <p>Password:</p>
+                <input type="password" name="password" id="password">
+                <br><br>
+                <input type="submit" value="Login">
+                <input type="button" onclick="toggle(this)" value="Show Password">
+            </form>
+        </fieldset>
+    </div>
+</body>
+<script>
+    var psw = document.getElementById("password");
+    function toggle(elem){
+            var type = psw.getAttribute("type");
+        if (type === "password") {
+            psw.setAttribute("type","text");
+            elem.value = "Hide Password";
+        }else{
+            psw.setAttribute("type","password");
+            elem.value = "Show Password";
+        }
+    }
+</script>
+</html>
