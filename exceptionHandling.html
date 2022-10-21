@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <h1>Exception Handling|Try Catch Block</h1>
+    <h3>Enter number lessthan 10 and graterthen 5</h3>
+    <button onclick="test()">Click Me</button>
+    <input type="text" id="num">
+    <h1 id="text"></h1>
+    <h3 id="error"></h3>
+</body>
+<script>
+    /*
+        // Exception Handling|Try Catch Block
+        function test(){
+        try {
+        var number = 400; //"ali husnain";
+        var res  = number.toUpperCase();
+        document.getElementById("text").innerText = res;
+        } catch (error) {
+            document.getElementById("error").innerText = error;
+        }
+    }
+    */
+
+    // Exception Handling Try Catch Block with error throw
+   var num = document.getElementById("num");
+    function test() {
+        var data = num.value;
+        try {
+            if(isNaN(data)){
+                throw "This is not a number: " +num.value;
+            }
+            else{
+                if(data<5 || data>10){
+                    throw "Number is out of range: " +num.value ; //throw statment
+                }
+                else{
+                    throw " " ;
+                }
+            }
+        }
+        catch(error) {
+            document.getElementById("error").innerText = error;
+        }
+        finally {          // finally statment
+            num.value = "";
+        }
+    }
+</script>
+</html>
