@@ -25,17 +25,16 @@
 <script>
     var data = document.getElementById("text");
     function test() {
-       var clss = data.getAttribute("class");
+       var clss = data.getAttribute("class");               // get attribute
     //    document.getElementById("res").innerText = clss;
-
-    if (clss === "red") {
-        document.getElementById("text").setAttribute("class","bule");
-    }
-    else
-    {
-        document.getElementById("text").setAttribute("class","red");
-    }
-        
+        if (clss === "red") {
+            document.getElementById("text").setAttribute("class","bule"); // set attribule
+        }
+        else
+        {
+            document.getElementById("text").setAttribute("class","red"); // set attribule 
+        }
+            
     }
     
 </script>
