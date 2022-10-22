@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form Confirm Password</title>
+<style>
+   #error{
+  color: red;
+}
+</style>
+</head>
+<body>
+   <fieldset style="width: 300px; margin-left: 30%; margin-top: 100px;">
+      <legend><h5>Password & Confirm Password</h5></legend>
+         <form action="#" method="get" onsubmit="return validate()"> 
+            <label for="username">Username*</label><br>
+            <input type="text" name="username" id="username"><br><br>
+            <label for="password">Password*</label><br>
+            <input type="password" name="password" id="password"><br><br>
+            <label for="confirm-password">Confirm Password*</label><br>
+            <input type="password" name="confirmPassword" onkeyup="check(this)" id="confirmPassword"><br>
+            <span id="error"></span>
+            <br>
+            <button id="btn">Submit</button>
+         </form>
+   </fieldset>
+</body>
+<script>
+   var flag = 1;
+   var password = document.getElementById("password");
+   function check(elem){
+      if (elem.value.length > 0) {
+            if (elem.value != password.value) {
+                  document.getElementById("error").innerHTML = "Confirm Password or Password does't match";
+                  document.getElementById("btn").disabled = true;
+                  flag = 0;
+            }
+            else
+            {
+               document.getElementById("error").innerText = "";
+               document.getElementById("btn").disabled = false;
+               flag = 1;
+            }
+      }
+      else
+      {
+         document.getElementById("error").innerText = "";
+         document.getElementById("btn").disabled = true;
+         flag = 0;
+      }
+   }
+   function validate() {
+      if(flag == 1){
+         return true;
+      }
+      else
+      {
+         return false;
+      }
+   }
+</script>
+</html>
