@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let | Var</title>
+</head>
+<body>
+    <h1>Different b/w Let or Var or Const Keyword</h1>
+</body>
+
+<script>
+    // Let => let is block scoped
+
+    let a = 10;
+    if(true){
+        let  a = 20;
+        console.warn(a); 
+    }
+    console.warn(a);
+
+    // Var => var is globle scoped
+
+    var b = 110;
+    if(true){
+        var  b = 120;
+        console.warn(b); 
+    }
+    console.warn(b);
+
+    // Hosing with let Can't be use (error)
+    console.warn(x);
+    let x = 15;
+    // Hosing with With Can be use (Undefine)
+    console.warn(y);
+    var y = 15;
+
+    // for loop use with var
+    for (var i = 0; i < 10; i++) {
+        setTimeout(function() {
+            console.warn(i);
+        },1000);
+    }
+    // for loop use with let
+    for (var i = 0; i < 10; i++) {
+        setTimeout(function() {
+            console.warn(i);
+        },1000);
+    }
+
+
+    // Const => const is constent can't chang value
+</script>
+</html>
