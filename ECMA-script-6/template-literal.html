@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literal</title>
+</head>
+<body>
+    <h1><center>Template Literal Use</center></h1>
+</body>
+<script>
+    let text = "Either you run the code , or code runs you";
+    let By = "Gora jerry";
+    let x = 20,y = 4;
+    function fullName() {
+        return "Ali Husnsin";
+    }
+
+    // old Method
+
+    document.write(text + " " + By + " " + fullName() + " " +  " " +x*y  + " This is old method" );
+
+    // New Method Template Literal
+
+    document.write(`<br> This is New method with Template Literal. ${text} ${By} ${fullName()} ${x+y}`);
+    
+</script>
+</html>
