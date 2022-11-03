@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find | FindIndex</title>
+</head>
+<body>
+    <h1>Fide and FindIndex function</h1>
+    <button onclick="FindIndex()">FindIndex</button>
+    <button onclick="Find()">Find</button>
+    <p>arrya = [10,2,20,50,76,100];</p>
+    <h1 id="res">Result Hare/...</h1>
+
+</body>
+<script>
+    
+    function Find(){
+     // find lessthen 50 first digit in array
+    // find() Function take parameter with function -> return the result value 
+            let data = [10,2,20,50,76,100];
+
+            let result = data.find(function(item){
+                return item<50;
+            });
+            document.getElementById("res").innerText = result;
+    }
+
+    function FindIndex() {
+    //find graterthen 50 first digit in array
+    // findIndex() Function take parameter with function -> return tne index number 
+            let data = [10,2,20,50,76,100];
+
+            let result = data.findIndex(function(item){
+                return item>50;
+            });
+            document.getElementById("res").innerText = result;
+    }
+
+
+    // find lessthen 50 first in object.
+    // find() Function take parameter with function -> return the object value in (id) base 
+    let data = [
+        {id: 60,name :"ali"},
+        {id: 30,name :"asad"},
+        {id: 50,name :"mudaser"},
+        {id: 20,name :"umair"},
+        {id: 100,name :"sulman"}
+
+    ]
+
+    // let result = data.find(function(item) {
+    //     return item.id < 50;
+    // }) ;
+
+    let result = data.findIndex(function(item) {
+        return item.id < 50;
+    }) ;
+
+console.log(result);
+
+    
+</script>
+</html>
