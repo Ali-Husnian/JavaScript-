@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <h1>Fate Arrow Function</h1>
+     <h2 id="res"></h2>
+     <button onclick="arrow()">Try Arrow</button>
+     <input type="text" name="data" id="date" placeholder="Setdate-Time" onkeyup="Myfunction(this)">
+
+</body>
+<script>
+    // Name function
+    function sumName() {
+        let a=42,b=23,c;
+        c=a+b;
+        return console.log(`${c} name function`);
+    }
+
+    // Anonymous function
+    let sumAnonymous = function(){
+        let a=12,b=33,c;
+        c=a+b;
+        return console.log(`${c} Anonymous function`);
+    }
+
+    // Arrow Function
+
+    let sumArrow = () => {
+        let a=52,b=13,c;
+        c=a+b;
+        return console.log(`${c} Arrow function`);
+    }
+
+    // Arrow Function return value 
+   const arrow = () => {
+        document.getElementById("res").innerText= "Ali Husnain";
+    };
+
+    // Use keyword(this) with arrow function
+    const item = {
+       name:"ali",
+       getNormal:function(){
+        console.log("normal",this); //return the  Objects
+       },
+       getArrow:() => {
+        console.log("arrow",this); // return the window objects
+       }
+
+    };
+
+    item.getFun();
+    item.getArrow();
+    sumArrow();
+    sumName();
+    sumAnonymous();
+</script>
+</html>
