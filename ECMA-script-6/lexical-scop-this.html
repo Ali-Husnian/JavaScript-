@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical scop for this</title>
+</head>
+<body>
+    <center>
+        <h1>Lexical scop for This keyword</h1>
+    </center>
+    <script>
+
+       /*
+        data = {
+            list:"Friends",
+            name:["broos","piter","sam","asad"],
+            getFriend:function() {
+                this.name.map( (item) => {   //use arrow function
+                    console.log(this.list,item);
+                })
+            },
+        }
+        data.getFriend();
+       */
+      
+      data = {
+        list: "Friends",
+        name:["brosly","piter","sam","asad"],
+        getFriend:function(){
+            let that = this;
+            this.name.map(function(item){
+                console.log(that.list,item);
+            })
+        },
+      }
+
+
+
+        data.getFriend();
+    </script>
+</body>
+</html>
