@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Compleate Promise & Promise Function<s/h1>
+</body>
+<script>
+    
+const promise = (check) =>{
+    // promise it take one function arrow  or  simple function
+    return new Promise((resolve,reject) => {  //it takes tow call backs prameters as a functions {resolve,reject}
+        console.log("Something is loading...") 
+        // delay someTime Response
+        setTimeout(() => {
+            if(check){
+                resolve("here is a success!");
+            }else{
+                reject("here is a fialler");
+            }
+        }, 3000);
+    });   
+}
+
+promise(true).then((result) =>{  // call the promise catch And then, It takes one function and one Paramter then show result and error
+    console.log(result);
+}).catch((error) => {
+    console.log(error);
+}).finally((result) => {
+    console.log("Finally Block",result);
+});
+
+//////////// promise channing: we are  resolve one to more promises is called promise channing///////////////////
+
+/*
+let data = fetch("https://dummy.restapiexample.com/api/v1/employees");
+
+data.then((item) =>{
+    return item.json();
+}).then((result) => {
+    console.log(result);
+})
+*/
+
+//////////// promise.all() which tells, all promise resolve till last resolve time --- If one promise reject its tells me only reject promise, dos't tell about resolve promises////////////////
+ /*
+let data = Promise.all([ // in array 
+    new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve("2 second");
+        }, 2000);
+    }),
+    new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve("5 second");
+        }, 5000);
+    }),
+    new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve("3 second");
+        }, 3000);
+    })
+]);*/
+
+/////// this function list down return (fulfilled)success block And reject (rejected) block ///////////
+
+/*
+let data = Promise.allSettled([ // in array 
+    new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve("2 second");
+        }, 2000);
+    }),
+    new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            reject("5 second");
+        }, 5000);
+    }),
+    new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve("3 second");
+        }, 3000);
+    })
+]);
+*/
+
+
+///////////// it will tell me one first resolve promise ////////////////
+
+let data = Promise.race([ // in array 
+    new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve("2 second");
+        }, 2000);
+    }),
+    new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            reject("5 second");
+        }, 5000);
+    }),
+    new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve("3 second");
+        }, 3000);
+    })
+]);
+
+data.then((res)=>{
+    console.log("success block",res);
+}).catch((err)=>{
+    console.log("failler block",err);
+})
+</script>
+</html>
