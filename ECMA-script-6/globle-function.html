@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globle Function</title>
+</head>
+<body>
+    <h1>Ecma Globle Function <small>isNaN & isFinite</small></h1>
+    
+</body>
+<script>
+    //isNaN()
+    let strings = "ali"; //true is't a number 
+    strings = {namd:"ali"}; ///true is't a number
+    strings = [1,2,4]; ///true is't a number
+    strings = null; // false  is a number
+    strings = 634; // false is a number
+    strings = undefined; ///true is't a number
+    
+    let results = isNaN(strings);
+    document.write(` isNaN () => ${results} <br>`);
+
+    //  This isFinite() takes number then return true otherwase false
+    
+    var string ;
+    string = [23,22,21]; //false 
+    string = 12/1; //true
+    string = "ali"; //false
+    string = undefined; //false
+    string = 10/0; // infinite number
+    strings = null; // false
+    var result = isFinite(string);
+    document.write(` isFinite () => ${result} <br>`);
+    console.warn(result);
+    
+</script>
+</html>
