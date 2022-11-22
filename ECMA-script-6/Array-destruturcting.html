@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destruturcting of Array</title>
+</head>
+<body>
+    <h1>Destruturcting of Array</h1>
+    
+</body>
+<script>
+    // fruits Array
+    let fruits = ['apple','mango','kiwi','orange']
+    // [ ...fruitsX ] Destruturcting with rest Opreater {and Defult parameter}
+    let [fruits1,fruits2,fruits3 ,fruits4 ,fruits5="graps",...fruitsX] = fruits   
+    // print array name
+    document.write(fruits1 +"<br>")// print 1st array element
+    document.write(fruits2+"<br>") // print 2nd array element
+    document.write(fruits5+"<br>") // print 5th array element Defult
+    document.write(fruitsX) //print fruitsX arrays elements, when do't Known lenght of array {rest op (...fruitsX)}
+</script>
+</html>
