@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Opreater</title>
+</head>
+<body>
+    <h1>Spread  Opreater of an Array</h1>
+</body>
+<script>
+    // fruits array
+    let fruits = ['apple','mango','kiwi'];
+
+    // use spread opreater 
+    console.log("Fruits : ",...fruits,);
+
+    // another fruits Array
+    let otherFruits = ['pyneapple',...fruits,'gawa'];
+
+    // marge two array (join)
+    let newFruits = ['banana','graps','pich']
+    console.log("NewFruits : ",...fruits,...newFruits);
+
+    // copy 1st array in 2nd array
+    console.log(...otherFruits);
+
+    // break refrence
+    let pushArray = [...newFruits]
+    pushArray.push("add-test")
+    console.log(pushArray);
+    console.log(newFruits);
+    
+
+
+
+</script>
+</html>
